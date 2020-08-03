@@ -1,10 +1,22 @@
+html{
+    scroll-behavior: smooth;
+}
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+ @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica;
     background: #333;
     color:#fff;
     line-height: 1.6;
@@ -49,6 +61,7 @@ body{
     color: #09e85e;
 }
 
+
 section {
     display: flex;
     flex-direction: column;
@@ -65,4 +78,58 @@ section h1{
 
 section p{
     font-size: 1.5rem;
+}
+
+section#about h1{
+    color:#F1DA73;
+}
+
+section#about p{
+    color:#333;
+    font: helvetica;
+    font-size: large;
+}
+.flex-item {
+    display:flex;
+    align-items: center;
+}
+
+.flex-item img{
+    flex-grow:0;
+    flex-shrink:0;
+    border-radius: 50%;
+    padding-right: 20px;
+}
+
+/*Section images*/
+section#home{
+    background-color: #C8F96C;
+}
+
+section#about{
+    background:url('https://images.pexels.com/photos/48604/pexels-photo-48604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center/
+    cover;
+}
+
+section#services{
+    background:url('https://images.pexels.com/photos/208544/pexels-photo-208544.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center/
+    cover;
+}
+
+section#services h1{
+    color:#F1DA73;
+}
+
+section#services p{
+    color:#333;
+}
+
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+section#testimonials{
+    background-color: #F1DA73;
 }
