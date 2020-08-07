@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 /**
  * Disable smooth scrolling when users have prefers-reduced-motion enabled
@@ -189,6 +190,20 @@ section#services p{
   
   #home .box:first-child {
     background: #A7E3C5;
+  }
+
+/* Footer */
+
+#main-footer {
+    padding: 2em;
+    background: #A7E3C5;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #main-footer a {
+    color: #2690d4;
+    text-decoration: none;
   }
 
 /* Media Queries */
