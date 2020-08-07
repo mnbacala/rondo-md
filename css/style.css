@@ -17,7 +17,7 @@ html{
 
 body{
     font-family: Helvetica;
-    background: #333;
+    background: #fff;
     color:#fff;
     line-height: 1.6;
     height:100vh;
@@ -28,6 +28,23 @@ body{
     height: 100%;
     /*css smooth scroll*/
 }
+
+.btn {
+    display: inline-block;
+    background: #F1DA73;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    margin: 0.5em 0;
+    border-radius: 50px;
+  }
+  
+  .btn:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+
+/*Navigation bar*/
 
 .navbar{
     position: fixed;
@@ -58,7 +75,7 @@ body{
 }
 
 .navbar ul li a:hover{
-    color: #09e85e;
+    color: #A7E3C5;
 }
 
 
@@ -78,6 +95,10 @@ section h1{
 
 section p{
     font-size: 1.5rem;
+}
+
+section#home{
+    color: #A7E3C5;
 }
 
 section#about h1{
@@ -103,7 +124,8 @@ section#about p{
 
 /*Section images*/
 section#home{
-    background-color: #C8F96C;
+    background-color: #fff;
+    text-align: left;
 }
 
 section#about{
@@ -124,11 +146,86 @@ section#services p{
     color:#333;
 }
 
-ul {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+/* Section A */
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+  }
+
+/* Section B */
+#section-b {
+    padding: 2em 1em 1em;
+  }
+  
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+#section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
 }
+  
+.card-content {
+    padding: 1.5em;
+}
+  
+/* Section C */
+#section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+  }
+
+/* Section Home / Boxes */
+#home .box {
+    padding: 2em;
+    color: #fff;
+  }
+  
+  #home .box:first-child {
+    background: #A7E3C5;
+  }
+
+/* Media Queries */
+@media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 3fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+  
+    #section-a .content-text {
+      columns: 2;
+      column-gap: 2em;
+    }
+  
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+  
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+  
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+  
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    #section-b li {
+      width: 31%;
+    }
+  }
 
 section#testimonials{
     background-color: #F1DA73;
