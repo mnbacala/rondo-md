@@ -11,11 +11,6 @@ html{
 	}
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body{
     font-family: Helvetica;
     background: #fff;
@@ -65,7 +60,9 @@ body{
     background: rgba(1,1,1,0.8);
     margin:0px;
 }*/
-
+.nav{
+  position: sticky;
+}
 .navbar ul{
     display: flex;
     list-style: none;
@@ -88,32 +85,27 @@ body{
     color: #A7E3C5;
 }
 
-.submenu {
-    list-style-type: none;
-    text-decoration: none;
-  }
-
-  .item:not(.button) a:hover,
-  .item a:hover::after {
-    color: #ccc;
-  }
-
 section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
 }
 
 section h1{
-    font-size: 4rem;
+    font-size: 5rem;
+}
+
+section h2{
+  font-size: 4rem;
 }
 
 section p{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
 }
 
 section#home{
@@ -153,8 +145,7 @@ section#about{
 }
 
 section#services{
-    background:url('https://images.pexels.com/photos/208544/pexels-photo-208544.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center/
-    cover;
+    background-color: #F1DA73;
 }
 
 section#services h1{
@@ -195,10 +186,23 @@ section#services p{
   
 /* Section C */
 #section-c {
-    background: #fff;
+    background: #2690d4;
     color: #333;
     padding: 2em;
   }
+#section-c h2{
+    color: #fff;
+}
+
+#section-c a{
+  color: #fff;
+  text-align: left;
+  color: #F1DA73;
+}
+
+#section-c a:hover{
+  color: #F1DA73;
+}
 
 /* Section Home / Boxes */
 #home .box {
@@ -214,7 +218,7 @@ section#services p{
 
 #main-footer {
     padding: 2em;
-    background: #A7E3C5;
+    background: #F1DA73;
     color: #fff;
     text-align: center;
   }
@@ -242,12 +246,17 @@ section#services p{
   
     .content-wrap,
     #section-b ul {
-      grid-column: 2/4;
+      grid-column: 1/4;
     }
   
     .box,
     #main-footer div {
       grid-column: span 2;
+    }
+
+    .box-c,
+    #main-footer div {
+      grid-column: span 4;
     }
   
     #section-b ul {
@@ -260,55 +269,89 @@ section#services p{
     }
   }
 
+  @media screen and (min-width: 700px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
 /*section#testimonials{
     background-color: #F1DA73;
 }*/
 
-/* Submenu up from mobile screens */
-.submenu {
-    display: none;
-  }
-  
-  .submenu-active .submenu {
-    display: block;
-  }
-  
-  .has-submenu i {
-    font-size: 12px;
-  }
-  
-  .has-submenu > a::after {
-    font-family: "Font Awesome 5 Free";
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 900;
-    content: "\f078";
-    color: white;
-    padding-left: 5px;
-  }
-  
-  .subitem a {
-    padding: 10px 15px;
-  }
-  
-  .submenu-active {
-    background-color: #111;
-    border-radius: 3px;
-  }
+/*About us*/
+.about-section{
+  background: url(../img/giavonne-rondo.PNG) no-repeat left;
+  background-size: 55%;
+  background-color: #A7E3C5;
+  overflow: hidden;
+  padding: 100px 0;
+}
 
-  /* Desktop menu */	
-  .submenu-active .submenu {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 68px;
-    background: #111;
-  }
-	
-  .toggle {
-    display: none;
-  }
-	
-  .submenu-active {
-    border-radius: 0;
-  }
+.inner-container{
+  width: 55%;
+  float: right;
+  background-color: #EDEBEB;
+  padding: 100px;
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 3rem;
+  /*font-weight: 900;*/
+  color:#191919;
+}
+
+.inner-container h2{
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 900;
+  color:#191919;
+}
+
+.inner-container h3{
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 900;
+  color:#191919;
+}
+
+.inner-container ul li{
+  font-size: 20px;
+  color: #545454;
+  text-align: justify;
+}
+
+.text{
+  font-size: 20px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+}
+
+
+.skills{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
+}
