@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    font-family: Helvetica;
+    font-family: Arial, Helvetica, sans-serif;
     background: #fff;
     color:#fff;
     line-height: 1.6;
@@ -28,7 +28,7 @@ body{
 .btn {
     display: inline-block;
     background: #F1DA73;
-    color: #fff;
+    color: #A7E3C5;
     text-decoration: none;
     padding: 1em 2em;
     margin: 0.5em 0;
@@ -100,12 +100,16 @@ section h1{
 }
 
 section h2{
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+section h3{
+  font-size: 2rem;
 }
 
 section p{
-    font-size: 2rem;
-    color: #fff;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 section#home{
@@ -206,7 +210,7 @@ section#services p{
 
 /* Section D */
 #section-d {
-  background: #fff;
+  background: #EDEBEB;
   color: #333;
   padding: 2em;
 }
@@ -215,19 +219,64 @@ section#services p{
 }
 
 #section-d p{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #333;
 }
 
 #section-d a{
 color: #fff;
 text-align: left;
-color: #F1DA73;
+color: #333;
 }
 
 #section-d a:hover{
+color: #A7E3C5;
+}
+
+/* Pricing Page */
+.container-2{
+  width: 100%;
+  float: center;
+  background-color: #EDEBEB;
+  padding: 100px;
+}
+.container-2 h2{
+  font-size: 3rem;
+  color: #333;
+  padding-bottom: 20px;
+}
+.container-2 h3{
+  font-size: 2rem;
+  color: #333;
+}
+.container-2 p{
+  font-size: 1.5rem;
+  color: #333;
+}
+.container-2 ul li{
+  font-size: 1.5rem;
+  color: #333;
+}
+#section-pricing {
+  background: #A7E3C5;
+  color: #333;
+  padding: 2em;
+}
+#section-pricing h2{
+  color: #333;
+}
+
+#section-pricing a{
+color: #fff;
+text-align: left;
 color: #F1DA73;
 }
+
+#section-pricing a:hover{
+color: #F1DA73;
+}
+
+
 
 /* Section Home / Boxes */
 #home .box {
@@ -362,13 +411,13 @@ color: #F1DA73;
 
 .inner-container ul li{
   font-size: 20px;
-  color: #545454;
+  color: #333;
   text-align: justify;
 }
 
 .text{
   font-size: 20px;
-  color: #545454;
+  color: #333;
   line-height: 30px;
   text-align: justify;
 }
