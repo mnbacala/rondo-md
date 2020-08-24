@@ -92,7 +92,18 @@ section {
     justify-content: left;
     text-align: left;
     width: 100%;
-    height: 55vh;
+    height: 53vh;
+}
+
+section-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  width: 100%;
+  height: 30vh;
+  background: #A7E3C5;
 }
 
 section h1{
@@ -190,7 +201,7 @@ section#services p{
   
 /* Section C */
 #section-c {
-    background: #2690d4;
+    background: #56a9dd;
     color: #333;
     padding: 2em;
   }
@@ -267,6 +278,25 @@ color: #A7E3C5;
 }
 
 #section-pricing a{
+text-align: left;
+color: #fff;
+}
+
+#section-pricing a:hover{
+color: #F1DA73;
+}
+
+/* Services Page */
+#section-pricing {
+  background: #A7E3C5;
+  color: #333;
+  padding: 2em;
+}
+#section-pricing h2{
+  color: #333;
+}
+
+#section-pricing a{
 color: #fff;
 text-align: left;
 color: #F1DA73;
@@ -275,7 +305,6 @@ color: #F1DA73;
 #section-pricing a:hover{
 color: #F1DA73;
 }
-
 
 
 /* Section Home / Boxes */
@@ -367,6 +396,13 @@ color: #F1DA73;
         padding: 60px;
     }
 }
+
+@media(max-width: 480px){
+ .logo img {
+  width: 224px;
+  margin-top: 10px;
+  }
+  }
 
 /*section#testimonials{
     background-color: #F1DA73;
