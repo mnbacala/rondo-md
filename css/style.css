@@ -44,6 +44,9 @@ body{
 
 .logo{
     padding: 7.5px 10px 7.5px 0;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
 }
 
 .item {
