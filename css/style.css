@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
     background: #fff;
     color:#fff;
     line-height: 1.6;
@@ -25,6 +25,7 @@ body{
     /*css smooth scroll*/
 }
 
+/*button*/
 .btn {
     display: inline-block;
     background: #F1DA73;
@@ -39,9 +40,9 @@ body{
     background: #eaeaea;
     color: #333;
   }
+/*end button*/
 
 /*Navigation bar*/
-
 .logo{
     padding: 7.5px 10px 7.5px 0;
     width: auto;
@@ -53,19 +54,10 @@ body{
     padding: 10px;
   }
 
-/*.navbar{
-    position: sticky;
-    top:0;
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    height:60px;
-    background: rgba(1,1,1,0.8);
-    margin:0px;
-}*/
 .nav{
   position: sticky;
 }
+
 .navbar ul{
     display: flex;
     list-style: none;
@@ -87,7 +79,52 @@ body{
 .navbar ul li a:hover{
     color: #A7E3C5;
 }
+/*End navigation*/
 
+.flex-item {
+    display:flex;
+    align-items: center;
+}
+
+.flex-item img{
+    flex-grow:0;
+    flex-shrink:0;
+    border-radius: 50%;
+    padding-right: 20px;
+}
+
+.container-2{
+  width: 100%;
+  float: center;
+  background-color: #EDEBEB;
+  padding-top:50px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  padding-left: 70px;
+}
+.container-2 h2{
+  font-size: 3rem;
+  color: #333;
+  padding-bottom: 20px;
+}
+.container-2 h3{
+  font-size: 2rem;
+  color: #333;
+}
+.container-2 p{
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.container-2 a{
+  color: #A7E3C5;
+}
+.container-2 ul li{
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/*Section content*/
 section {
     display: flex;
     flex-direction: column;
@@ -96,17 +133,6 @@ section {
     text-align: left;
     width: 100%;
     height: 53vh;
-}
-
-section-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-  text-align: left;
-  width: 100%;
-  height: 30vh;
-  background: #A7E3C5;
 }
 
 section h1{
@@ -139,39 +165,10 @@ section#about p{
     font: helvetica;
     font-size: large;
 }
-.flex-item {
-    display:flex;
-    align-items: center;
-}
 
-.flex-item img{
-    flex-grow:0;
-    flex-shrink:0;
-    border-radius: 50%;
-    padding-right: 20px;
-}
-
-/*Section images*/
 section#home{
     background-color: #fff;
     text-align: left;
-}
-
-section#about{
-    background:url('https://images.pexels.com/photos/48604/pexels-photo-48604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center/
-    cover;
-}
-
-section#services{
-    background-color: #F1DA73;
-}
-
-section#services h1{
-    color:#F1DA73;
-}
-
-section#services p{
-    color:#333;
 }
 
 /* Section A */
@@ -180,6 +177,7 @@ section#services p{
     color: #333;
     padding-bottom: 2em;
   }
+/*End Section A*/
 
 /* Section B */
 #section-b {
@@ -201,7 +199,8 @@ section#services p{
 .card-content {
     padding: 1.5em;
 }
-  
+/*End Section B*/ 
+
 /* Section C */
 #section-c {
     background: #56a9dd;
@@ -221,12 +220,16 @@ section#services p{
 #section-c a:hover{
   color: #F1DA73;
 }
+/*End section c*/
 
 /* Section D */
 #section-d {
   background: #EDEBEB;
   color: #333;
   padding: 2em;
+}
+#section-d img{
+  opacity: 9;
 }
 #section-d h2{
   color: #333;
@@ -238,77 +241,35 @@ section#services p{
 }
 
 #section-d a{
-color: #fff;
 text-align: left;
-color: #333;
+color: #F1DA73;
 }
 
 #section-d a:hover{
 color: #A7E3C5;
 }
+/*End Section D*/
 
 /* Pricing Page */
-.container-2{
-  width: 100%;
-  float: center;
-  background-color: #EDEBEB;
-  padding: 100px;
-}
-.container-2 h2{
-  font-size: 3rem;
-  color: #333;
-  padding-bottom: 20px;
-}
-.container-2 h3{
-  font-size: 2rem;
-  color: #333;
-}
-.container-2 p{
-  font-size: 1.5rem;
-  color: #333;
-}
-.container-2 ul li{
-  font-size: 1.5rem;
-  color: #333;
-}
 #section-pricing {
   background: #A7E3C5;
   color: #333;
   padding: 2em;
 }
 #section-pricing h2{
-  color: #333;
+  color: #fff;
+  font-size: 4rem;
 }
 
 #section-pricing a{
 text-align: left;
-color: #fff;
-}
-
-#section-pricing a:hover{
 color: #F1DA73;
+text-decoration: none;
 }
+/*End Pricing*/
 
 /* Services Page */
-#section-pricing {
-  background: #A7E3C5;
-  color: #333;
-  padding: 2em;
-}
-#section-pricing h2{
-  color: #333;
-}
-
-#section-pricing a{
-color: #fff;
-text-align: left;
-color: #F1DA73;
-}
-
-#section-pricing a:hover{
-color: #F1DA73;
-}
-
+/*End Services*/
 
 /* Section Home / Boxes */
 #home .box {
@@ -319,9 +280,95 @@ color: #F1DA73;
   #home .box:first-child {
     background: #A7E3C5;
   }
+#home img{
+  width: 90%;
+}
+
+/* Section Home / Boxes */
+#section-d .box-2 {
+  padding: 2em;
+  color: #EDEBEB;
+}
+
+#section-d .box-2:first-child {
+  background: #EDEBEB;
+}
+#section-d img{
+width: 90%;
+}
+/*End Home/Boxes*/
+/*End Sections*/
+
+/*Hero*/
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #A7E3C5;
+  width: 100%;
+  height: 30vh;
+}
+.hero-title{
+  margin: 0;
+  font-size: 4rem;
+}
 
 /* Footer */
 
+footer {
+  background-color: #A7E3C5;
+  color: #fff;
+  line-height: 1.5;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer li{
+  list-style: none;
+}
+footer p{
+  margin: 0;
+}
+.ft-title {
+  color: #fff;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+.footer-container{
+  flex: 1;    /* same as flex-grow: 1; */
+}
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem /*200px*/;
+}
+.ft-legal {
+  padding: 0.9375rem 1.875rem;
+  background-color: #F1DA73;
+}
+.ft-legal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+  flex: 1;       /* same as flex-grow: 1; */
+}
 #main-footer {
     padding: 2em;
     background: #F1DA73;
@@ -405,7 +452,17 @@ color: #F1DA73;
   width: 224px;
   margin-top: 10px;
   }
+}
+@media only screen and (min-width: 29.8125rem /*477px*/) {
+  .ft-main {
+      justify-content: space-around;
   }
+}
+@media only screen and (min-width: 77.5rem /*1240px*/ ) {
+  .ft-main {
+      justify-content: space-evenly;
+  }
+}
 
 /*section#testimonials{
     background-color: #F1DA73;
