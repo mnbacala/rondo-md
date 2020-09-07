@@ -7,7 +7,8 @@ html{
  */
  @media screen and (prefers-reduced-motion: reduce) {
 	html {
-		scroll-behavior: auto;
+    scroll-behavior: auto;
+    height:100%
 	}
 }
 
@@ -76,6 +77,11 @@ body{
     color: #F1DA73;
 }
 
+.navbar p{
+  color: #333;
+  font-size: 14px
+}
+
 .navbar ul li a:hover{
     color: #A7E3C5;
 }
@@ -111,16 +117,20 @@ body{
   font-size: 2rem;
   color: #333;
 }
-.container-2 p{
+
+.container-2 h4{
   font-size: 1.5rem;
   color: #333;
 }
-
+.container-2 p{
+  font-size: 20px;
+  color: #333;
+}
 .container-2 a{
-  color: #A7E3C5;
+  color: #FC4445;
 }
 .container-2 ul li{
-  font-size: 1.5rem;
+  font-size: 20px;
   color: #333;
 }
 
@@ -203,34 +213,51 @@ section#home{
 
 /* Section C */
 #section-c {
-    background: #56a9dd;
+    background: #E9E9E7;
     color: #333;
     padding: 2em;
   }
-#section-c h2{
-    color: #fff;
+#section-c h3{
+    color: #333;
+}
+#section-c p{
+  color: #333;
 }
 
 #section-c a{
-  color: #fff;
   text-align: left;
-  color: #F1DA73;
+  color: #FC4445;
 }
 
 #section-c a:hover{
-  color: #F1DA73;
+  color: #FC4445;
 }
 /*End section c*/
 
 /* Section D */
 #section-d {
-  background: #EDEBEB;
+  background:url(../img/female-doctor-patient-2.jpg);
+  background-color: #E9E9E7;
+  background-size: contain;
+  background-position: center right;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 100px 70px #E9E9E7 inset, -10px -10px 100px 50px #E9E9E7 inset; 
   color: #333;
   padding: 2em;
 }
-#section-d img{
-  opacity: 9;
-}
+
+/*#section-d .bg-image{
+  position:absolute;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  z-index: -1;
+  opacity: 0.4;
+}*/
 #section-d h2{
   color: #333;
 }
@@ -242,11 +269,11 @@ section#home{
 
 #section-d a{
 text-align: left;
-color: #F1DA73;
+color: #FC4445;
 }
 
 #section-d a:hover{
-color: #A7E3C5;
+color: #FC4445;
 }
 /*End Section D*/
 
@@ -281,18 +308,9 @@ text-decoration: none;
     background: #A7E3C5;
   }
 #home img{
-  width: 90%;
+  width: 100%;
 }
 
-/* Section Home / Boxes */
-#section-d .box-2 {
-  padding: 2em;
-  color: #EDEBEB;
-}
-
-#section-d .box-2:first-child {
-  background: #EDEBEB;
-}
 #section-d img{
 width: 90%;
 }
@@ -356,6 +374,9 @@ footer p{
   padding: 0.9375rem 1.875rem;
   background-color: #333;
 }
+.ft-main-item a:hover{
+  color: #A7E3C5;
+}
 .ft-legal-list {
   width: 100%;
   display: flex;
@@ -365,21 +386,13 @@ footer p{
   margin: 0.125rem 0.625rem;
   white-space: nowrap;
 }
+.ft-legal-list a:hover{
+  color: #A7E3C5;
+}
 /* one before the last child */
 .ft-legal-list li:nth-last-child(2) {
   flex: 1;       /* same as flex-grow: 1; */
 }
-#main-footer {
-    padding: 2em;
-    background: #F1DA73;
-    color: #fff;
-    text-align: center;
-  }
-  
-  #main-footer a {
-    color: #2690d4;
-    text-decoration: none;
-  }
 
 /* Media Queries */
 @media (min-width: 700px) {
@@ -401,17 +414,6 @@ footer p{
     #section-b ul {
       grid-column: 1/4;
     }
-  
-    .box,
-    #main-footer div {
-      grid-column: span 2;
-    }
-
-    .box-c,
-    #main-footer div {
-      grid-column: span 4;
-    }
-  
     #section-b ul {
       display: flex;
       justify-content: space-around;
@@ -438,12 +440,23 @@ footer p{
     }
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 992px){
     .about-section{
-        padding: 0;
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+    .image{
+      height: 100vh;
+  }
+    .inner-container{
+      height: 100vh;
     }
     .inner-container{
-        padding: 60px;
+      font-size: 20px;
+        margin-top: 50px;
+    }
+    .inner-container{
+      font-size: 14px;
     }
 }
 
@@ -463,25 +476,65 @@ footer p{
       justify-content: space-evenly;
   }
 }
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
 
 /*section#testimonials{
     background-color: #F1DA73;
 }*/
 
+/*Parallax*/
+.image-container {
+  /* The image used */
+  background: url(../img/gobilemd-office.jpg);
+  width: auto;
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-container-2 {
+  /* The image used */
+  background: url(../img/giavonne-rondo.PNG);
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*End Parallax*/
 /*About our doctor*/
+.about-image{
+background: url(../img/giavonne-rondo.PNG) center/cover no-repeat;
+}
 .about-section{
-  background: url(../img/giavonne-rondo.PNG) no-repeat left;
-  background-size: 55%;
-  background-color: #A7E3C5;
-  overflow: hidden;
-  padding: 100px 0;
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 0 auto;
 }
 
 .inner-container{
-  width: 55%;
-  float: right;
-  background-color: #EDEBEB;
-  padding: 100px;
+  background: #A7E3C5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inner-container h1{
